@@ -1,0 +1,24 @@
+{
+  "name": "webnova",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/goodguyrahuls/webNova#readme",
+  "bugs": {
+    "url": "https://github.com/goodguyrahuls/webNova/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goodguyrahuls/webNova.git"
+  },
+  "license": "ISC",
+  "author": "Mayur Borse and Rahul Chaurasiya",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.13.0"
+  }
+}
