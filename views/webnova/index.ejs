@@ -1,34 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebNova</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="style.css">
-</head>
+<%- layout("/layouts/boilerplate.ejs") %>
 
 <body>
-    <section class="header">
-        <nav class="navbar">
-            <a href="/webnova"><img src="/images/logob-removebg-preview.png" alt=""></a>
-            <div class="navlist" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="/webnova">Home</a></li>
-                    <li><a href="/webnova/about">About Us</a></li>
-                    <li><a href="/webnova/service">Service</a></li>
-                    <li><a href="/webnova/project">Project</a></li>
-                    <li><a href="/webnova/blog">Blog</a></li>
-                </ul>
-            </div>
-            <button type="button" class="btn btn-outline-warning btn-sm"><a href="/webnova/contact">Contact Us</a></button>
-            <i class="fa fa-bars fas" onclick="showMenu()"></i>
-        </nav>
-    </section>
 <!--================= home section ============== -->
     <div class="homepagein">
         <div class="container">
@@ -39,7 +11,7 @@
                 <button class="btn btn-outline-warning btn-sm">EXplore Now!</button>
             </div>
             <div class="homeimg">
-                <img src="IMAGE/bannerimg.png " alt="bannerimg">
+                <img src="images/bannerimg.png " alt="bannerimg">
             </div>
         </div>
     </div>
@@ -79,21 +51,21 @@
         
         <div class="projects-grid">
             <div class="project-card">
-                <img src="IMAGE/pro01.png" alt="Blog Website">
+                <img src="images/pro01.png" alt="Blog Website">
                 <h3>India Explorer Blog</h3>
                 <p>A comprehensive blog website that explores the best travel destinations in India.</p>
                 <a href="https://goodguyrahuls.github.io/Namobharat/index.html" class="project-btn">View Details</a>
             </div>
             
             <div class="project-card">
-                <img src="IMAGE/pro02.png" alt="Pizza Shop Website">
+                <img src="images/pro02.png" alt="Pizza Shop Website">
                 <h3>E-Commerce Pizza Shop</h3>
                 <p>An online pizza ordering platform with integrated backend for seamless delivery service.</p>
                 <a href="https://goodguyrahuls.github.io/pizza.hub/" class="project-btn">View Details</a>
             </div>
             
             <div class="project-card">
-                <img src="IMAGE/pro03.png" alt="Ambulance Assistance">
+                <img src="images/pro03.png" alt="Ambulance Assistance">
                 <h3>Ambulance Life Assist</h3>
                 <p>A fast-response ambulance assistance app designed to provide emergency medical support.</p>
                 <a href="https://goodguyrahuls.github.io/Life-Assist/index.html" class="project-btn">View Details</a>
@@ -112,7 +84,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <div class="brand-logo">
-                    <img src="IMAGE/logob-removebg-preview.png" alt="Brand Logo">
+                    <img src="images/logob-removebg-preview.png" alt="Brand Logo">
                     <span>WEBNOVA</span>
                 </div>
                 <div class="social-icons">

@@ -1,0 +1,23 @@
+<%- layout("/layouts/boilerplate.ejs") %>
+
+<body>
+    <h2 class="text-center mt-3">Contact details</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Message</th>
+        </tr>
+        <% for(contact of contacts) { %>
+            <tr>
+                <td><%= contact.name %></td>
+                <td><%= contact.ph %></td>
+                <td><%= contact.email %></td>
+                <td><%= contact.message %></td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>
+
