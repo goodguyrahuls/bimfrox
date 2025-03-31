@@ -16,9 +16,6 @@ app.use(express.urlencoded({extended: true}));
 app.engine("ejs", ejsMate);
 
 
-require('dotenv').config();  // .env file ko load karne ke liye
-console.log("MONGO_URI:", process.env.MONGO_URI);  // Debugging ke liye
-
 
 require('dotenv').config();
 
