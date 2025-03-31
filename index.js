@@ -25,16 +25,16 @@ async function main() {
 }
 
 //Index route
-app.get("/webnova", (req, res) => {
+app.get("/frox", (req, res) => {
     res.render("webnova/index.ejs");
 })
 
 //Contact route
-app.get("/webnova/contact", (req, res) => {
+app.get("/frox/contact", (req, res) => {
     res.render("webnova/contact.ejs");
 })
 
-app.post("/webnova/contact", async(req, res) => {
+app.post("/frox/contact", async(req, res) => {
     let {name, ph, email, message} = req.body;
     let client = new Contact({
         name: name,
@@ -46,24 +46,24 @@ app.post("/webnova/contact", async(req, res) => {
     res.redirect("/webnova");
 })
 
-app.get("/webnova/admin", async(req, res) => {
+app.get("/frox/admin", async(req, res) => {
     let contacts = await Contact.find();
     res.render("webnova/admin.ejs", { contacts });
 })
 
-app.get("/webnova/about", (req, res) => {
+app.get("/frox/about", (req, res) => {
     res.render("webnova/about.ejs");
 })
 
-app.get("/webnova/services", (req, res) => {
+app.get("/frox/services", (req, res) => {
     res.render("webnova/service.ejs");
 })
 
-app.get("/webnova/projects", (req, res) => {
+app.get("/frox/projects", (req, res) => {
     res.render("webnova/project.ejs");
 })
 
-app.get("/webnova/blogs", (req, res) => {
+app.get("/frox/blogs", (req, res) => {
     res.render("webnova/blog.ejs");
 })
 
