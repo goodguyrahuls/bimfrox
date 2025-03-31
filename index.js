@@ -42,7 +42,7 @@ app.post("/frox/contact", async(req, res) => {
         message: message,
     })
     await client.save();
-    res.redirect("/webnova");
+    res.redirect("/frox");
 })
 
 app.get("/frox/admin", async(req, res) => {
