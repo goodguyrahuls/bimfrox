@@ -2,18 +2,19 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const ejsMate = require("ejs-mate");
+const mongoose = require('mongoose');
+const asyncWrap = require("./utils/asyncWrap.js");
 
 const Contact = require("./models/contact.js");
 const port = 3000;
 
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "/views"));
+app.set("views", path.join(__dirname, "views"));
 
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({extended: true}));
 app.engine("ejs", ejsMate);
 
-const mongoose = require('mongoose');
 
 main().catch(err => console.log(err));
 
