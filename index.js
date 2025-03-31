@@ -16,13 +16,15 @@ app.use(express.urlencoded({extended: true}));
 app.engine("ejs", ejsMate);
 
 
-main().catch(err => console.log(err));
+require('dotenv').config();  // .env file ko load karne ke liye
+console.log("MONGO_URI:", process.env.MONGO_URI);  // Debugging ke liye
 
-async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/webnova');
 
-  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
-}
+require('dotenv').config();
+
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected Successfully"))
+  .catch(err => console.error("MongoDB Connection Error:", err));
 
 //Index route
 app.get("/frox", (req, res) => {
