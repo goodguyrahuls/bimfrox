@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const asyncWrap = require("./utils/asyncWrap.js");
 
 const Contact = require("./models/contact.js");
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -18,10 +18,11 @@ app.engine("ejs", ejsMate);
 
 
 require('dotenv').config();
-
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected Successfully"))
   .catch(err => console.error("MongoDB Connection Error:", err));
+
+
 
 //Index route
 app.get("/frox", (req, res) => {
@@ -71,5 +72,5 @@ app.get("/frox/blogs", (req, res) => {
 
 
 app.listen(port, () => {
-    console.log("Server is now listening on local port");
+    console.log(`Server is now listening on port ${port}`);
 })
