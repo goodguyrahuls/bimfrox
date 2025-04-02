@@ -42,7 +42,7 @@ img {
 
 .navlist ul li a {
     font-family: manrope, sans-serif;
-    color: #003366;
+    color: #164316;
     text-decoration: none;
     font-size: 20px;
 }
@@ -69,7 +69,7 @@ img {
 }
 
 .fas {
-    color: #0055aa;
+    color: #164316;
 }
 
 .navbar .btn {
@@ -81,7 +81,7 @@ img {
 
 .navbar .btn {
     display: inline-block;
-    background-color: #269626;
+    background-color: #1c7d1c;
     color: white;
     font-size: 18px;
     font-weight: bold;
@@ -124,10 +124,10 @@ ul {
     font-size: 14px;
     font-weight: bold;
     border-radius: 5px;
-    border: 2px solid #269626;
+    border: 2px solid #1c7d1c;
     /* Warning color */
     background: transparent;
-    color: #164316;
+    color: #1c7d1c;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
@@ -140,7 +140,7 @@ ul {
 }
 
 .btn:hover {
-    background: #ffc107;
+    background: #164316;
     color: #fff;
 }
 
@@ -197,7 +197,7 @@ ul {
     width: 100%;
     height: 647px;
     /* Adjust height as needed */
-    background-image: url('IMAGE/banner.png');
+    background-image: url('images/banner.png');
     /* Replace with your image URL */
     background-size: cover;
     background-position: center;
@@ -275,6 +275,16 @@ ul {
     margin: 0 10px 0;
 }
 
+.homeimg {
+    width: 400px; /* Adjust width */
+    height: 250px; /* Adjust height */
+    overflow: hidden;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain image aspect */
+}
 @media (max-width: 700px) {
     .homepagein {
         height: 100%;
@@ -307,6 +317,7 @@ ul {
     }
 }
 
+
 /* ===============infinite scrolling text effect=================== */
 .marquee-container {
     width: 100%;
@@ -329,6 +340,7 @@ ul {
 }
 
 .marquee span {
+    color: #050505;
     display: inline-block;
     min-width: max-content;
 }
@@ -346,25 +358,25 @@ ul {
 
 /* =============service ========================== */
 .services {
-
+    background-color: #ffe8c7;
     padding: 50px 20px;
     text-align: center;
 }
 
 
 h2 {
-    font-size: 28px;
-    color: #333;
+    font-weight: 600;
+    color: #C9783D;
 }
 
 .highlight {
-    color: #4caf4f8a;
+    color: #050505;
 }
 
 .subtext {
     margin: 10px 0 30px;
-    color: #666;
-    font-size: 16px;
+    color: #413535;
+    font-size: 1.4rem;
 }
 
 .service-container {
@@ -414,7 +426,7 @@ h3 {
 /* asfwuiehgfuiedsfvgdyu */
 .footer-container {
     width: 100%;
-    background-color: #e8e8e8;
+    background-color: #C6FBD8;
     text-align: center;
     padding-top: 40px;
     position: relative;
@@ -422,7 +434,7 @@ h3 {
 }
 
 .footer-top {
-    background-color: #003366;
+    background-color: #50a76e;
     color: white;
     padding: 15px 20px;
     display: flex;
@@ -450,7 +462,7 @@ h3 {
 }
 
 .contact-btn a {
-    color: #003366;
+    color: #50a76e;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
@@ -459,7 +471,7 @@ h3 {
 }
 
 .contact-btn:hover {
-    background: #003366;
+    background: #39784f;
     border: 2px solid #ffffff;
 }
 
@@ -483,7 +495,7 @@ h3 {
 
 .footer-section h3 {
     margin-bottom: 15px;
-    color: #003366;
+    color: #164316;
     font-size: 18px;
 }
 
@@ -539,7 +551,7 @@ h3 {
 
 /* Footer Bottom */
 .footer-bottom {
-    background-color: #003366;
+    background-color: #50a76e;
     color: white;
     padding: 10px;
     font-size: 14px;
@@ -745,7 +757,7 @@ h3 {
 
 .project-btn {
     display: inline-block;
-    background: #003366;
+    background: #1c7d1c;
     color: white;
     padding: 8px 16px;
     border-radius: 5px;
@@ -754,7 +766,7 @@ h3 {
 }
 
 .project-btn:hover {
-    background: #0055aa;
+    background: #164316;
 }
 
 @media (max-width: 768px) {
@@ -839,7 +851,7 @@ h3 {
 
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 0;
 }
 
 table {
