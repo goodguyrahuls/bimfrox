@@ -26,12 +26,12 @@ mongoose.connect(process.env.MONGO_URI)
 
 //Index route
 app.get("/frox", (req, res) => {
-    res.render("webnova/index.ejs");
+    res.render("frox/index.ejs");
 })
 
 //Contact route
 app.get("/frox/contact", (req, res) => {
-    res.render("webnova/contact.ejs");
+    res.render("frox/contact.ejs");
 })
 
 app.post("/frox/contact", async(req, res) => {
@@ -48,26 +48,28 @@ app.post("/frox/contact", async(req, res) => {
 
 app.get("/frox/admin", async(req, res) => {
     let contacts = await Contact.find();
-    res.render("webnova/admin.ejs", { contacts });
+    res.render("frox/admin.ejs", { contacts });
 })
 
 app.get("/frox/about", (req, res) => {
-    res.render("webnova/about.ejs");
+    res.render("frox/about.ejs");
 })
 
 app.get("/frox/services", (req, res) => {
-    res.render("webnova/service.ejs");
+    res.render("frox/service.ejs");
 })
 
 app.get("/frox/projects", (req, res) => {
-    res.render("webnova/project.ejs");
+    res.render("frox/project.ejs");
 })
 
 app.get("/frox/blogs", (req, res) => {
-    res.render("webnova/blog.ejs");
+    res.render("frox/blog.ejs");
 })
 
-
+app.get("/frox/program", (req, res) => {
+    res.render("frox/program.ejs")
+})
 
 
 
