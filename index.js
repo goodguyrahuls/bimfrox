@@ -78,7 +78,9 @@ app.get("/frox/program", (req, res) => {
 })
 
 
-
+app.get("/frox/students", (req, res) => {
+    res.render("")
+})
 
 app.post("/students", upload.single("resume"), async (req, res) => {
     try {
