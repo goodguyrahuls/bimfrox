@@ -292,7 +292,7 @@ ul {
     }
 
     .homtext h1 {
-        margin: 1.1rem;
+        margin: 2rem 1rem 0;
     }
 
     .homeimg {
@@ -307,6 +307,12 @@ ul {
 
     .homtext .btn {
         margin: 1rem;
+    }
+
+    .homeimg img {
+        margin-top: 0rem;
+        border-radius: 1rem;
+        width: 90%;
     }
 }
 
@@ -415,6 +421,41 @@ h3 {
     color: #666;
 }
 
+/* ===================TEAM SECTION ================================ */
+.teams {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.team-data {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.team-item {
+    padding: 15px;/
+}
+
+.team-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.team-member {
+    text-align: center;
+    width: 100%;
+}
+
+.team-member p {
+    font-family: cursive;
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+}
 
 /* asfwuiehgfuiedsfvgdyu */
 .footer-container {
@@ -575,7 +616,8 @@ h3 {
     }
 }
 
-/* about=============================== section ============================= */
+/* =============================== aboutsection ============================= */
+
 .about-container {
     width: 100%;
     padding: 50px 20px;
@@ -623,7 +665,7 @@ h3 {
 
 .contacts-btn {
     display: inline-block;
-    background: #269626;
+    background: #003366;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -632,7 +674,7 @@ h3 {
 }
 
 .contacts-btn:hover {
-    background: #164316;
+    background: #0055aa;
 }
 
 /* ======================contact section ========================= */
@@ -702,6 +744,7 @@ h3 {
 .projects-container {
     width: 100%;
     padding: 50px 20px;
+    background-image: url(images/projectbanner.png);
     background-color: #f8f9fa;
     text-align: center;
 }
@@ -749,7 +792,7 @@ h3 {
 
 .project-btn {
     display: inline-block;
-    background: #1c7d1c;
+    background: #50a76e;
     color: white;
     padding: 8px 16px;
     border-radius: 5px;
