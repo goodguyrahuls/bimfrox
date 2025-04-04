@@ -79,7 +79,6 @@ app.get("/frox/program", (req, res) => {
 
 
 
-const Student = require("./models/Student"); // Model import karo
 
 app.post("/students", upload.single("resume"), async (req, res) => {
     try {
