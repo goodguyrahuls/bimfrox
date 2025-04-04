@@ -81,7 +81,7 @@ img {
 
 .navbar .btn {
     display: inline-block;
-    background-color: #1c7d1c;
+    background-color: #50a76e;
     color: white;
     font-size: 18px;
     font-weight: bold;
@@ -96,7 +96,7 @@ img {
 }
 
 .navbar .btn:hover {
-    background-color: #164316;
+    background-color: #50a76e;
     transform: scale(1.05);
     transition: 0.3s ease-in-out;
 }
@@ -442,7 +442,7 @@ h3 {
 }
 
 .team-item img {
-    width:25rem;
+    width: 25rem;
 }
 
 .team-member {
@@ -454,6 +454,29 @@ h3 {
     font-family: cursive;
     margin-top: 0;
     margin-bottom: 1rem;
+
+}
+
+@media(max-width :700px) {
+    .teams {
+        width: 100%;
+        background-image: url(images/teambanner.png);
+        text-align: center;
+        /* padding: 50px 20px; */
+    }
+
+    .team-item img {
+        width: 20rem;
+    }
+
+    .team-data {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+    }
 
 }
 
