@@ -423,6 +423,7 @@ h3 {
 
 /* ===================TEAM SECTION ================================ */
 .teams {
+    background-image: url(images/teambanner.png);
     text-align: center;
     padding: 50px 20px;
 }
@@ -441,8 +442,7 @@ h3 {
 }
 
 .team-item img {
-    width: 100%;
-    border-radius: 10px;
+    width:25rem;
 }
 
 .team-member {
@@ -545,7 +545,7 @@ h3 {
 
 .footer-section ul li a {
     font-size: 16px;
-    color: #333232;
+    color: #201e1e;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -573,7 +573,7 @@ h3 {
 }
 
 .social-icons a {
-    color: #003366;
+    color: #000000;
     font-size: 20px;
     transition: 0.3s;
 }
