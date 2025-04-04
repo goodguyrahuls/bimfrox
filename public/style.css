@@ -933,3 +933,34 @@ th {
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
+/* ==================Program section================= */
+.progpag{
+    margin:175px 0 10px;
+    width:100%;
+    justify-content: center;
+    
+}
+.progtext{
+    width: 50%;
+}
+.progtext h1{
+    font-size: 3rem;
+    color: #164316;
+    padding:1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.progimg{
+    width: 50%;
+}
+.progimg img{
+    width: 100%;
+}
+#applybtn{
+    margin: 0.5rem;
+    width: 50%;
+    background-color: #50a76e;
+    color: white;
+    
+}
