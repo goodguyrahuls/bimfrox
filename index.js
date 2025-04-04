@@ -3,10 +3,16 @@ const app = express();
 const path = require('path');
 const ejsMate = require("ejs-mate");
 const mongoose = require('mongoose');
+const multer = require("multer");
 const asyncWrap = require("./utils/asyncWrap.js");
 
 const Contact = require("./models/contact.js");
+const Student = require("./models/resume");
 const port = process.env.PORT || 3000;
+
+
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -70,6 +76,33 @@ app.get("/frox/blogs", (req, res) => {
 app.get("/frox/program", (req, res) => {
     res.render("frox/program.ejs")
 })
+
+
+
+const Student = require("./models/Student"); // Model import karo
+
+app.post("/students", upload.single("resume"), async (req, res) => {
+    try {
+        const { name, email, phone } = req.body;
+
+        const newStudent = new Student({
+            name: name,
+            email: email,
+            phone: phone,
+            resume: {
+                data: req.file.buffer, // Resume ka actual data
+                contentType: req.file.mimetype, // File ka type (PDF/DOCX)
+            }
+        });
+
+        await newStudent.save();
+        res.redirect("/frox");
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Error submitting form");
+    }
+});
+
 
 
 
