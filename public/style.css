@@ -475,7 +475,11 @@ h3 {
     font-size: 14px;
     color: #666;
 }
-
+@media(max-width:700px) {
+    .subtext {
+        font-size: 1.2rem;
+    }
+}
 
 /* ===================TEAM SECTION ================================ */
 .teams {
@@ -538,6 +542,9 @@ h3 {
         gap: 10px;
         flex-wrap: wrap;
         margin-top: 12px;
+    }
+    .team-member p{
+        font-size: 1.2rem;
     }
 
 }
@@ -897,6 +904,9 @@ h3 {
     .projects-grid {
         flex-direction: column;
         align-items: center;
+    }
+    projects-content p{
+        font-size: 1.2rem;
     }
 }
 
