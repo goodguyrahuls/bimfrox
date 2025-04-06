@@ -51,7 +51,7 @@ img {
     content: '';
     width: 0%;
     height: 2px;
-    background: #50a76e;
+    background: #0f3a16;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -69,7 +69,7 @@ img {
 }
 
 .fas {
-    color: #50a76e;
+    color: #0f3a16;
 }
 
 .navbar .btn {
@@ -81,7 +81,7 @@ img {
 
 .navbar .btn {
     display: inline-block;
-    background-color: #50a76e;
+    background-color: #0f3a16;
     color: white;
     font-size: 18px;
     font-weight: bold;
@@ -96,7 +96,7 @@ img {
 }
 
 .navbar .btn:hover {
-    background-color: #50a76e;
+    background-color: #0f3a16;
     transform: scale(1.05);
     transition: 0.3s ease-in-out;
 }
@@ -124,10 +124,10 @@ ul {
     font-size: 14px;
     font-weight: bold;
     border-radius: 5px;
-    border: 2px solid #50a76e;
+    border: 2px solid #0f3a16;
     /* Warning color */
     background: transparent;
-    color: #50a76e;
+    color: #0f3a16;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
@@ -140,7 +140,7 @@ ul {
 }
 
 .btn:hover {
-    background: #50a76e;
+    background: #0f3a16;
     color: #fff;
 }
 
@@ -226,7 +226,7 @@ ul {
 }
 
 .homtext h1 span {
-    color: #164316;
+    color: #0f3a16;
 }
 
 .homtext p {
@@ -245,7 +245,7 @@ ul {
 }
 
 .homtext .btn {
-    color: #50a76e;
+    color: #0f3a16;
 }
 
 .cont-btn {
@@ -257,7 +257,7 @@ ul {
 
 .homtext .btn {
     display: inline-block;
-    background-color: #50a76e;
+    background-color: #0f3a16;
     color: white;
     font-size: 18px;
     /* font-weight: bold;
@@ -269,8 +269,8 @@ ul {
 
 
 .homtext .btn:hover {
-    border-radius: 2px #161616;
-    background-color: #50a76e;
+    border-radius: 2px #0f3a16;
+    background-color: #0f3a16;
     transform: scale(1.05);
     transition: 0.3s ease-in-out;
 }
@@ -379,7 +379,7 @@ ul {
     overflow: hidden;
     white-space: nowrap;
     background-color: #4caf4f8a;
-    color: #164316;
+    color: #0f3a16;
     font-size: 20px;
     padding: 10px 0;
     /* display: flex*/
@@ -395,7 +395,7 @@ ul {
 }
 
 .marquee span {
-    color: #050505;
+    color: #0f3a16;
     display: inline-block;
     min-width: max-content;
 }
@@ -422,7 +422,7 @@ ul {
 .services h2 {
     font-size: 3rem;
     font-weight: 600;
-    color: #164316;
+    color: #0f3a16;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -512,15 +512,14 @@ h3 {
 .team-member h1 {
     font-size: 3rem;
     font-weight: 600;
-    color: #164316;
+    color: #0f3a16;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .team-member p {
     font-style: italic;
-    margin: 10px 0 30px;
+    margin: 10px 0 20px;
     color: #413535;
-    font-size: 1.4rem;
-
+    font-size: 1.2rem;
 }
 
 @media(max-width :700px) {
@@ -552,7 +551,7 @@ h3 {
 /* asfwuiehgfuiedsfvgdyu */
 .footer-container {
     width: 100%;
-    background-color: #C6FBD8;
+    background-color: #0f3a16;
     text-align: center;
     padding-top: 40px;
     position: relative;
@@ -560,7 +559,7 @@ h3 {
 }
 
 .footer-top {
-    background-color: #50a76e;
+    background-color: #0f3a16;
     color: white;
     padding: 15px 20px;
     display: flex;
@@ -574,35 +573,6 @@ h3 {
 .footer-top h2 {
     color: #ffffff;
     font-size: 22px;
-}
-
-.contact-btn {
-    background: #ffffff;
-    border: 2px solid white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    display: inline-block;
-}
-
-.contact-btn a {
-    color: #50a76e;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-}
-
-.contact-btn:hover {
-    background: #39784f;
-    border: 2px solid #ffffff;
-}
-
-.contact-btn:hover a {
-    color: #ffffff;
 }
 
 .footer-content {
@@ -621,7 +591,7 @@ h3 {
 
 .footer-section h3 {
     margin-bottom: 15px;
-    color: #164316;
+    color: #ffffff;
     font-size: 18px;
 }
 
@@ -637,13 +607,13 @@ h3 {
 
 .footer-section ul li a {
     font-size: 16px;
-    color: #201e1e;
+    color: #ffffff;
     text-decoration: none;
     transition: 0.3s;
 }
 
 .footer-section ul li a:hover {
-    color: #003366;
+    color: #c0c0c0;
 }
 
 /* Brand Logo */
@@ -665,7 +635,7 @@ h3 {
 }
 
 .social-icons a {
-    color: #000000;
+    color: #ffffff;
     font-size: 20px;
     transition: 0.3s;
 }
@@ -677,12 +647,14 @@ h3 {
 
 /* Footer Bottom */
 .footer-bottom {
-    background-color: #50a76e;
-    color: white;
+    background-color: #ffffff;
+    color: #0f3a16;
     padding: 10px;
     font-size: 14px;
 }
-
+.COMNAME{
+    color:#ffffff;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer-content {
@@ -1027,7 +999,7 @@ tr:nth-child(even) {
 .progtext h1 {
     font-weight: 600;
     font-size: 3rem;
-    color: #164316;
+    color: #0f3a16;
     padding-right: 1rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -1048,7 +1020,7 @@ tr:nth-child(even) {
 #applybtn {
     padding: 0.5rem;
     width: 50%;
-    background-color: #50a76e;
+    background-color: #0f3a16;
     color: white;
 }
 
@@ -1075,12 +1047,12 @@ tr:nth-child(even) {
 
 .program-left h2 {
     font-size: 2rem;
-    color: #103f1b;
+    color: #0f3a16;
 }
 
 .program-left h2 span {
     font-style: italic;
-    color: #2e8b57;
+    color: #0f3a16;
 }
 
 .apply-box {
@@ -1093,7 +1065,7 @@ tr:nth-child(even) {
 }
 
 .apply-btn {
-    background-color: #103f1b;
+    background-color: #0f3a16;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -1147,7 +1119,7 @@ tr:nth-child(even) {
         text-align: start;
         font-weight: 600;
         font-size: 2rem;
-        color: #164316;
+        color: #0f3a16;
         padding-right: 1rem;
     }
 
