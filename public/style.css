@@ -475,6 +475,7 @@ h3 {
     font-size: 14px;
     color: #666;
 }
+
 @media(max-width:700px) {
     .subtext {
         font-size: 1.2rem;
@@ -509,44 +510,62 @@ h3 {
     text-align: center;
     width: 100%;
 }
+
 .team-member h1 {
     font-size: 3rem;
     font-weight: 600;
     color: #0f3a16;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 .team-member p {
+    text-align:justify;
     font-style: italic;
     margin: 10px 0 20px;
     color: #413535;
     font-size: 1.2rem;
 }
-
-@media(max-width :700px) {
+@media(max-width: 700px) {
     .teams {
         width: 100%;
         background-image: url(images/teambanner.png);
+        background-size: cover;
+        background-position: center;
+        padding: 50px 20px;
         text-align: center;
-        /* padding: 50px 20px; */
     }
 
-    .team-item img {
-        width: 20rem;
+    .team-member {
+        width: 100%;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .team-member h1 {
+        font-size: 1.8rem;
+    }
+
+    .team-member p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
     }
 
     .team-data {
-        width: 100%;
         display: flex;
-        justify-content: center;
-        gap: 10px;
         flex-wrap: wrap;
-        margin-top: 12px;
-    }
-    .team-member p{
-        font-size: 1.2rem;
+        justify-content: center;
+        gap: 20px;
     }
 
+    .team-item img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
 }
+
 
 /* asfwuiehgfuiedsfvgdyu */
 .footer-container {
@@ -652,9 +671,11 @@ h3 {
     padding: 10px;
     font-size: 14px;
 }
-.COMNAME{
-    color:#ffffff;
+
+.COMNAME {
+    color: #ffffff;
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer-content {
@@ -747,45 +768,61 @@ h3 {
 
 /* ========================ABOUT US SECTION==================== */
 
-.aboutpag{
+.aboutpag {
     padding-top: 5rem;
     background-color: #e6f3b1;
     width: 100%;
 
 }
-.aboutph01text{
+
+.aboutph01text {
     margin-top: 2rem;
     width: 50%;
 }
-.aboutph01text h1{
+
+.aboutph01text h1 {
     font-weight: 600;
     font-size: 3rem;
     color: #0f3a16;
     padding-right: 1rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.aboutph01text p{
+
+.aboutph01text p {
     font-size: 1.4rem;
     color: #0f3a16;
     padding-right: 1rem;
     font-style: italic;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.aboutph01img{
+
+.aboutph01img {
     margin-top: 2rem;
     width: 50%;
 }
-.aboutph01img img{
+
+.aboutph01img img {
     padding: 1rem;
     width: 100%;
 }
 
+
+
+/* Main Section Styling */
 .developerdata {
+    text-align: center;
+    background-color: #f9f9f9;
     padding: 60px 20px;
-    background-color: #ffffff;
+}
+
+/* Container and Heading */
+.developerabout.container {
+    max-width: 1200px;
+    margin: auto;
 }
 
 .divelopertext h2 {
+    text-align: justify;
     font-weight: 600;
     font-size: 3rem;
     color: #0f3a16;
@@ -794,50 +831,62 @@ h3 {
 }
 
 .divelopertext p {
+    text-align: justify;
     font-size: 1.4rem;
     color: #000000;
     padding-right: 1rem;
     font-style: italic;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.developerabout{
+.developerabout {
     flex-direction: column;
 }
-.team-list {
+/* Team Grid */
+ .team-list {
     list-style: none;
-    display: flex;
-    justify-content:left;
+    display: flex
+;
+    justify-content: left;
     gap: 30px;
     flex-wrap: wrap;
     padding: 0;
 }
 
-.team-member {
-    max-width: 180px;
-    text-align: center;
+/* Each Member */
+.teams-member {
+    background: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    width: 260px;
+    border-radius: 0.5rem;
+    transition: 0.3s ease;
 }
 
-.team-member img {
+.teams-member:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.teams-member img {
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
-.team-member img:hover {
-    transform: scale(1.05);
-}
-
-.team-member p {
-    margin-top: 10px;
-    font-weight: bold;
+/* Text Below Image */
+.teams-member p {
+    font-size: 18px;
+    font-weight: 600;
     color: #333;
 }
 
-.team-member span {
+.teams-member span {
     display: block;
     font-weight: normal;
     font-size: 0.9rem;
     color: #777;
+}
+.developerabout{
+    flex-direction: column;
 }
 
 .bimfrox-unique {
@@ -845,6 +894,7 @@ h3 {
     background-color: #efe9e2;
     text-align: center;
 }
+
 .section-title {
     text-align: justify;
     font-weight: 600;
@@ -852,81 +902,97 @@ h3 {
     color: #0f3a16;
     padding-right: 1rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+
 }
-.unique-container p{
+
+.unique-container p {
     text-align: justify;
     font-size: 1.4rem;
-    color: #000000;
+    color: #222222;
     padding-right: 1rem;
     font-style: italic;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 .unique-container {
     max-width: 1200px;
     margin: auto;
 }
+
 .unique-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
     gap: 0.5rem;
 }
+
 .unique-box {
     background: #ffffff3b;
-    border-radius:1rem;
-    padding:0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
     transition: 0.3s ease;
 }
+
 .unique-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
+
 .unique-box img {
     width: 100%;
     margin-bottom: 15px;
 }
+
 .unique-box h3 {
     font-size: 20px;
     margin-bottom: 10px;
     color: #2c3e50;
 }
+
 .unique-box p {
     text-align: center;
     font-size: 14px;
     color: #555;
 }
+
 .unique-footer {
     margin-top: 40px;
 }
+
 .unique-footer p {
     font-size: 16px;
     margin-bottom: 20px;
 }
+
 @media (max-width: 768px) {
     .aboutpag {
         padding-top: 3rem;
         background-color: #e6f3b1;
         width: 100%;
     }
+
     .aboutph01text {
         margin-top: 2rem;
         width: 100%;
     }
+
     .aboutph01text h1 {
         font-size: 2.5rem;
-        
+
     }
+
     .aboutph01text p {
         text-align: justify;
         font-size: 1.2rem;
         color: #0f3a16;
         padding-right: 0.9rem;
     }
+
     .aboutph01img {
         margin-top: 0rem;
         width: 100%;
     }
+
     .divelopertext h2 {
         font-weight: 600;
         font-size: 2rem;
@@ -934,25 +1000,34 @@ h3 {
         padding-right: 0rem;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
+
     .divelopertext p {
         font-size: 1.2rem;
         text-align: justify;
-        
+
+    }
+    .developerdata {
+        padding: 40px 15px;
+    }
+
+    .teams-member {
+        width: 60%;
+        max-width: 320px;
+    }
+.team-list {
+        gap: 20px;
     }
     .team-list {
         list-style: none;
-        display: flex;
+        display: flex
+;
         justify-content: center;
         gap: 26px;
         flex-wrap: wrap;
         padding: 0;
     }
-    .section-title {
-        text-align: start;
-        font-weight: 600;
-        font-size: 1.7rem;
-    }
 }
+
 /* ======================contact section ========================= */
 .contact-container {
     width: 100%;
@@ -1089,7 +1164,8 @@ h3 {
         flex-direction: column;
         align-items: center;
     }
-    projects-content p{
+
+    projects-content p {
         font-size: 1.2rem;
     }
 }
