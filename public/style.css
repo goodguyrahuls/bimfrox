@@ -681,7 +681,7 @@ h3 {
 }
 
 /* =============================== aboutsection ============================= */
-
+/* 
 .about-container {
     width: 100%;
     padding: 50px 20px;
@@ -741,6 +741,218 @@ h3 {
     background: #0055aa;
 }
 
+ */
+
+
+
+/* ========================ABOUT US SECTION==================== */
+
+.aboutpag{
+    padding-top: 5rem;
+    background-color: #e6f3b1;
+    width: 100%;
+
+}
+.aboutph01text{
+    margin-top: 2rem;
+    width: 50%;
+}
+.aboutph01text h1{
+    font-weight: 600;
+    font-size: 3rem;
+    color: #0f3a16;
+    padding-right: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.aboutph01text p{
+    font-size: 1.4rem;
+    color: #0f3a16;
+    padding-right: 1rem;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.aboutph01img{
+    margin-top: 2rem;
+    width: 50%;
+}
+.aboutph01img img{
+    padding: 1rem;
+    width: 100%;
+}
+
+.developerdata {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.divelopertext h2 {
+    font-weight: 600;
+    font-size: 3rem;
+    color: #0f3a16;
+    padding-right: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.divelopertext p {
+    font-size: 1.4rem;
+    color: #000000;
+    padding-right: 1rem;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.developerabout{
+    flex-direction: column;
+}
+.team-list {
+    list-style: none;
+    display: flex;
+    justify-content:left;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.team-member {
+    max-width: 180px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.team-member img:hover {
+    transform: scale(1.05);
+}
+
+.team-member p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.team-member span {
+    display: block;
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.bimfrox-unique {
+    padding: 60px 20px;
+    background-color: #efe9e2;
+    text-align: center;
+}
+.section-title {
+    text-align: justify;
+    font-weight: 600;
+    font-size: 3rem;
+    color: #0f3a16;
+    padding-right: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.unique-container p{
+    text-align: justify;
+    font-size: 1.4rem;
+    color: #000000;
+    padding-right: 1rem;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.unique-container {
+    max-width: 1200px;
+    margin: auto;
+}
+.unique-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
+    gap: 0.5rem;
+}
+.unique-box {
+    background: #ffffff3b;
+    border-radius:1rem;
+    padding:0.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+.unique-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.unique-box img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.unique-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+.unique-box p {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+.unique-footer {
+    margin-top: 40px;
+}
+.unique-footer p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+    .aboutpag {
+        padding-top: 3rem;
+        background-color: #e6f3b1;
+        width: 100%;
+    }
+    .aboutph01text {
+        margin-top: 2rem;
+        width: 100%;
+    }
+    .aboutph01text h1 {
+        font-size: 2.5rem;
+        
+    }
+    .aboutph01text p {
+        text-align: justify;
+        font-size: 1.2rem;
+        color: #0f3a16;
+        padding-right: 0.9rem;
+    }
+    .aboutph01img {
+        margin-top: 0rem;
+        width: 100%;
+    }
+    .divelopertext h2 {
+        font-weight: 600;
+        font-size: 2rem;
+        color: #0f3a16;
+        padding-right: 0rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .divelopertext p {
+        font-size: 1.2rem;
+        text-align: justify;
+        
+    }
+    .team-list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 26px;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .section-title {
+        text-align: start;
+        font-weight: 600;
+        font-size: 1.7rem;
+    }
+}
 /* ======================contact section ========================= */
 .contact-container {
     width: 100%;
