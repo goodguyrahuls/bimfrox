@@ -519,12 +519,13 @@ h3 {
 }
 
 .team-member p {
-    text-align:justify;
+    text-align: justify;
     font-style: italic;
     margin: 10px 0 20px;
     color: #413535;
     font-size: 1.2rem;
 }
+
 @media(max-width: 700px) {
     .teams {
         width: 100%;
@@ -701,71 +702,6 @@ h3 {
     }
 }
 
-/* =============================== aboutsection ============================= */
-/* 
-.about-container {
-    width: 100%;
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-content {
-    max-width: 800px;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.about-content h1,
-.about-content h2 {
-    color: #003366;
-}
-
-.about-content p,
-.about-content ul {
-    color: #333;
-    line-height: 1.6;
-}
-
-.about-content ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.about-content ul li {
-    background: #e8e8e8;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.contact-btn-container {
-    margin-top: 20px;
-}
-
-.contacts-btn {
-    display: inline-block;
-    background: #003366;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s ease-in-out;
-}
-
-.contacts-btn:hover {
-    background: #0055aa;
-}
-
- */
-
-
-
 /* ========================ABOUT US SECTION==================== */
 
 .aboutpag {
@@ -838,16 +774,17 @@ h3 {
     font-style: italic;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 .developerabout {
     flex-direction: column;
 }
+
 /* Team Grid */
- .team-list {
+.team-list {
     list-style: none;
-    display: flex
-;
+    display: flex;
     justify-content: left;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
     padding: 0;
 }
@@ -856,7 +793,7 @@ h3 {
 .teams-member {
     background: #ffffff;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-    width: 260px;
+    width: 220px;
     border-radius: 0.5rem;
     transition: 0.3s ease;
 }
@@ -885,7 +822,8 @@ h3 {
     font-size: 0.9rem;
     color: #777;
 }
-.developerabout{
+
+.developerabout {
     flex-direction: column;
 }
 
@@ -983,7 +921,7 @@ h3 {
 
     .aboutph01text p {
         text-align: justify;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         color: #0f3a16;
         padding-right: 0.9rem;
     }
@@ -995,7 +933,7 @@ h3 {
 
     .divelopertext h2 {
         font-weight: 600;
-        font-size: 2rem;
+        font-size: 1.8rem;
         color: #0f3a16;
         padding-right: 0rem;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -1006,25 +944,36 @@ h3 {
         text-align: justify;
 
     }
+
     .developerdata {
         padding: 40px 15px;
     }
 
     .teams-member {
-        width: 60%;
+        width: 65%;
         max-width: 320px;
     }
-.team-list {
+
+    .team-list {
         gap: 20px;
     }
+
     .team-list {
         list-style: none;
-        display: flex
-;
+        display: flex;
         justify-content: center;
         gap: 26px;
         flex-wrap: wrap;
         padding: 0;
+    }
+
+    .section-title {
+        text-align: justify;
+        font-weight: 600;
+        font-size: 1.8rem;
+        color: #0f3a16;
+        padding-right: 1rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 }
 
