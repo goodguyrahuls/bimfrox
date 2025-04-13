@@ -195,7 +195,7 @@ ul {
 /* ================== home page =====================*/
 .homepagein {
     width: 100%;
-    height: 647px;
+    height: 32rem;
     /* Adjust height as needed */
     background-image: url('images/banner.png');
     background-size: cover;
@@ -374,44 +374,6 @@ ul {
     animation: popIn 1.5s ease-in-out;
 }
 
-
-/* ===============infinite scrolling text effect=================== */
-.marquee-container {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    background-color: #4caf4f8a;
-    color: #0f3a16;
-    font-size: 20px;
-    padding: 10px 0;
-    /* display: flex*/
-    align-items: center;
-}
-
-.marquee {
-    display: flex;
-    gap: 50px;
-    /* Space between repeated texts */
-    white-space: nowrap;
-    animation: marquee 10s linear infinite;
-}
-
-.marquee span {
-    color: #0f3a16;
-    display: inline-block;
-    min-width: max-content;
-}
-
-/* Animation */
-@keyframes marquee {
-    from {
-        transform: translateX(100%);
-    }
-
-    to {
-        transform: translateX(-100%);
-    }
-}
 
 /* =============service ========================== */
 .services {
@@ -1279,7 +1241,7 @@ h3 {
 }
 
 .project-card {
-    padding: 20px;
+    padding: 0px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -1297,6 +1259,7 @@ h3 {
 }
 
 .project-card p {
+    padding: 0.2rem;
     color: #666;
     font-size: 14px;
     margin-bottom: 10px;
@@ -1307,6 +1270,7 @@ h3 {
     background: #50a76e;
     color: white;
     padding: 8px 16px;
+    margin: 1rem;
     border-radius: 5px;
     text-decoration: none;
     transition: 0.3s;
