@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
+//Index route
 router.get("/", (req, res) => {
-    res.render("/frox/index.ejs");
+    res.render("frox/index.ejs");
 })
 
 //Contact route
