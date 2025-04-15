@@ -20,7 +20,7 @@ router.post("/contact", async(req, res) => {
         message: message,
     })
     await client.save();
-    res.redirect("/frox");
+    res.redirect("/");
 })
 
 router.get("/admin", async(req, res) => {

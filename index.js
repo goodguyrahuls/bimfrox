@@ -31,8 +31,9 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected Successfully"))
   .catch(err => console.error("MongoDB Connection Error:", err));
 
+
 //bimfrox route
-app.use("/frox", frox)
+app.use("/", frox)
 
 
 
@@ -51,7 +52,7 @@ app.post("/students", upload.single("resume"), async (req, res) => {
         });
 
         await newStudent.save();
-        res.redirect("/frox");
+        res.redirect("/");
     } catch (error) {
         console.error(error);
         res.status(500).send("Error submitting form");
