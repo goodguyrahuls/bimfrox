@@ -1,0 +1,30 @@
+<%- layout("/layouts/boilerplate.ejs") %>
+
+<body>
+
+    <!-- ==========About section============= -->
+    <section class="contact-container">
+        <div class="contact-content">
+            <h1>Login</h1>
+            <form action="/dashboard" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">username</label>
+                    <input type="text" id="name" name="username" required placeholder="Enter your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your name">
+                </div>
+                
+                <button type="submit" class="contacts-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+    
+ 
+    <!-- JavaScript for Toggle Menu -->
+    <script src="script.js"></script>
+</body>
+
+</html>

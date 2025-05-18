@@ -5,8 +5,10 @@ const ejsMate = require("ejs-mate");
 const mongoose = require('mongoose');
 const multer = require("multer");
 const asyncWrap = require("./utils/asyncWrap.js");
+const session = require("express-session");
+const LocalStratergy = require("passport-local");
+const Admin = require("./models/admin.js");
 
-const Contact = require("./models/contact.js");
 const Student = require("./models/resume");
 const port = process.env.PORT || 3000;
 
@@ -16,6 +18,7 @@ const upload = multer({ storage: storage });
 
 //routes
 const frox = require("./routes/frox.js");
+const passport = require('passport');
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -25,15 +28,27 @@ app.use(express.urlencoded({extended: true}));
 app.engine("ejs", ejsMate);
 
 
-
 require('dotenv').config();
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected Successfully"))
   .catch(err => console.error("MongoDB Connection Error:", err));
 
+app.use(session({
+  secret: "secret",
+  resave: false ,
+  saveUninitialized: false,
+}))
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new LocalStratergy(Admin.authenticate()));
+
+passport.serializeUser(Admin.serializeUser());
+passport.deserializeUser(Admin.deserializeUser());
 
 //bimfrox route
-app.use("/", frox)
+app.use("/", frox);
 
 
 
@@ -66,3 +81,4 @@ app.post("/students", upload.single("resume"), async (req, res) => {
 app.listen(port, () => {
     console.log(`Server is now listening on port ${port}`);
 })
+
