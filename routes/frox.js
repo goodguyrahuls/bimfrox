@@ -36,17 +36,6 @@ router.post("/dashboard", passport.authenticate("local", {failureRedirect: "/"})
     res.render("frox/admin.ejs", { contacts });
 })
 
-router.get("/signup", async (req, res) => {
-    let newAdmin = new Admin({
-        email: "mayurborse9119@gmail.com",
-        username: "bimfroxadmin"
-    })
-
-    let password = "bim336591"
-
-    let regAdmin = await Admin.register(newAdmin, password);
-    res.send(regAdmin);
-})
 
 router.get("/about", (req, res) => {
     res.render("frox/about.ejs");
