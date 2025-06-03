@@ -8,8 +8,9 @@ const asyncWrap = require("./utils/asyncWrap.js");
 const session = require("express-session");
 const LocalStratergy = require("passport-local");
 const Admin = require("./models/admin.js");
+const Student = require("./models/student.js");
 
-const Student = require("./models/resume");
+
 const port = process.env.PORT || 3000;
 
 
@@ -27,6 +28,17 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({extended: true}));
 app.engine("ejs", ejsMate);
 
+// main()
+// .then(() => {
+//     console.log("MongoDB connected successfully");
+// })
+// .catch(err => console.log(err));
+
+// async function main() {
+//   await mongoose.connect('mongodb://127.0.0.1:27017/webnova');
+
+//   // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
+// }
 
 require('dotenv').config();
 mongoose.connect(process.env.MONGO_URI)
@@ -42,40 +54,31 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-passport.use(new LocalStratergy(Admin.authenticate()));
+passport.use("local-admin", new LocalStratergy(Admin.authenticate()));
+passport.use("local-student", new LocalStratergy({ usernameField: "userid" }, Student.authenticate()));
 
-passport.serializeUser(Admin.serializeUser());
-passport.deserializeUser(Admin.deserializeUser());
+passport.serializeUser((user, done) => {
+  const userType = user instanceof Admin ? 'Admin' : 'Student';
+  done(null, { id: user._id, type: userType });
+});
 
-//bimfrox route
-app.use("/", frox);
-
-
-
-app.post("/students", upload.single("resume"), async (req, res) => {
-    try {
-        const { name, email, phone } = req.body;
-
-        const newStudent = new Student({
-            name: name,
-            email: email,
-            phone: phone,
-            resume: {
-                data: req.file.buffer, // Resume ka actual data
-                contentType: req.file.mimetype, // File ka type (PDF/DOCX)
-            }
-        });
-
-        await newStudent.save();
-        res.redirect("/");
-    } catch (error) {
-        console.error(error);
-        res.status(500).send("Error submitting form");
+passport.deserializeUser(async (obj, done) => {
+  try {
+    if (obj.type === 'Admin') {
+      const admin = await Admin.findById(obj.id);
+      done(null, admin);
+    } else {
+      const student = await Student.findById(obj.id);
+      done(null, student);
     }
+  } catch (err) {
+    done(err);
+  }
 });
 
 
-
+//bimfrox route
+app.use("/", frox);
 
 
 app.listen(port, () => {
