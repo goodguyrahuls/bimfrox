@@ -71,17 +71,5 @@ router.post("/program", passport.authenticate("local-student", { failureRedirect
     res.send("all data");
 })
 
-router.get("/signup", async(req, res) => {
-    let userid = "Bimfrox batch 1.o"
-    let password = "batch002"
-    let registeredStudent = await Student.register(new Student(
-        {
-            userid: userid,
-        }
-    ), password)
-
-    console.log(registeredStudent);
-})
-
 
 module.exports = router;
