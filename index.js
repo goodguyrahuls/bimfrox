@@ -3,19 +3,14 @@ const app = express();
 const path = require('path');
 const ejsMate = require("ejs-mate");
 const mongoose = require('mongoose');
-const multer = require("multer");
-const asyncWrap = require("./utils/asyncWrap.js");
 const session = require("express-session");
 const LocalStratergy = require("passport-local");
 const Admin = require("./models/admin.js");
 const Student = require("./models/student.js");
+const ExpressError = require('./utils/ExpressError');
 
 
 const port = process.env.PORT || 3000;
-
-
-const storage = multer.memoryStorage();
-const upload = multer({ storage: storage });
 
 //routes
 const frox = require("./routes/frox.js");
@@ -77,8 +72,17 @@ passport.deserializeUser(async (obj, done) => {
 });
 
 
-//bimfrox route
+
 app.use("/", frox);
+
+app.all("*", (req, res, next) => {
+  next(new ExpressError("Page not found", 404));
+})
+
+app.use((err, req, res, next) => {
+  const {message = "Some error occured", statusCode = 500} = err;
+  res.status(statusCode).send(message);
+})
 
 
 app.listen(port, () => {

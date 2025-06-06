@@ -6,6 +6,7 @@ const Student = require('../models/student');
 const router = express.Router();
 
 
+
 //Index route
 router.get("/", (req, res) => {
     res.render("frox/index.ejs");
@@ -55,12 +56,12 @@ router.get("/blogs", (req, res) => {
 })
 
 router.get("/program", (req, res) => {
-    res.render("frox/program.ejs")
+    res.render("frox/program.ejs");
 })
 
 
 router.get("/students", (req, res) => {
-    res.render("")
+    res.render("");
 })
 
 router.get("/program/login", (req, res) => {
@@ -70,6 +71,8 @@ router.get("/program/login", (req, res) => {
 router.post("/program", passport.authenticate("local-student", { failureRedirect: "/program/login" }), async (req, res) => {
     res.send("all data");
 })
+
+
 
 
 module.exports = router;
