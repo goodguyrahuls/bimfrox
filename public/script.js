@@ -47,3 +47,11 @@ var navLinks = document.getElementById("navLinks");
     }, false)
   })
 })()
+
+
+// 3 seconds baad alert ko dismiss karne ka code:
+setTimeout(function () {
+  let alertNode = document.querySelector('.alert');
+  let bsAlert = new bootstrap.Alert(alertNode);
+  bsAlert.close();
+}, 3000);

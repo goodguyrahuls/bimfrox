@@ -80,8 +80,8 @@ app.all("*", (req, res, next) => {
 })
 
 app.use((err, req, res, next) => {
-  const {message = "Some error occured", statusCode = 500} = err;
-  res.status(statusCode).send(message);
+  const {message = "Something went wrong", statusCode = 500} = err;
+  res.status(statusCode).render("error.ejs", { message });
 })
 
 
