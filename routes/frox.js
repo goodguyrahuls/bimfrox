@@ -4,7 +4,7 @@ const Admin = require('../models/admin');
 const passport = require('passport');
 const Student = require('../models/student');
 const router = express.Router();
-
+const asyncWrap = require("../utils/asyncWrap");
 
 
 //Index route
@@ -17,7 +17,7 @@ router.get("/contact", (req, res) => {
     res.render("frox/contact.ejs");
 })
 
-router.post("/contact", async (req, res) => {
+router.post("/contact", asyncWrap(async (req, res) => {
     let { name, ph, email, message } = req.body;
     let client = new Contact({
         name: name,
@@ -27,16 +27,16 @@ router.post("/contact", async (req, res) => {
     })
     await client.save();
     res.redirect("/");
-})
+}))
 
 router.get("/dashboard", (req, res) => {
     res.render("frox/adminform.ejs");
 })
 
-router.post("/dashboard", passport.authenticate("local-admin", { failureRedirect: "/" }), async (req, res) => {
+router.post("/dashboard", passport.authenticate("local-admin", { failureRedirect: "/" }), asyncWrap(async (req, res) => {
     let contacts = await Contact.find();
     res.render("frox/admin.ejs", { contacts });
-})
+}))
 
 
 router.get("/about", (req, res) => {
@@ -68,9 +68,9 @@ router.get("/program/login", (req, res) => {
     res.render("frox/programform.ejs");
 })
 
-router.post("/program", passport.authenticate("local-student", { failureRedirect: "/program/login" }), async (req, res) => {
+router.post("/program", passport.authenticate("local-student", { failureRedirect: "/program/login" }), asyncWrap(async (req, res) => {
     res.send("all data");
-})
+}))
 
 
 
